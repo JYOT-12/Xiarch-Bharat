@@ -1,0 +1,31 @@
+[ User Natural Language Goal ]
+               │
+               ▼
+┌──────────────────────────────┐
+│     Agent Planner Engine     │  <── Decomposes goal into sequential steps
+└──────────────┬───────────────┘
+               │
+               ▼
+┌────────────────────────────────────────────────────────┐
+│               Task Orchestration Loop                  │
+│                                                        │
+│   ┌────────────────┐         ┌─────────────────────┐   │
+│   │  Search Tool   │ ──no──> │ Self-Correction     │   │
+│   │ (DuckDuckGo API│         │ Handler (Validation)│   │
+│   └───────┬────────┘         └──────────┬──────────┘   │
+│           │                             │              │
+│      [Data Error?]                      │ (Trigger     │
+│           │ <───────────────────────────┘  Fallback)   │
+│           ▼                                            │
+│   ┌────────────────┐                                   │
+│   │ Synthesizer    │                                   │
+│   └───────┬────────┘                                   │
+│           │                                            │
+│           ▼                                            │
+│   ┌────────────────┐                                   │
+│   │ File Writer    │                                   │
+│   └───────┬────────┘                                   │
+└───────────┼────────────────────────────────────────────┘
+            │
+            ▼
+ [ Structured Markdown Report: agent_report.md ]
